@@ -4,12 +4,11 @@ const port = 3000;
 const fs = require('fs');
 const ndjson = require('ndjson');
 
-
 const drawings = [];
 
-fs.createReadStream('popsicle.ndjson').pipe(ndjson.parse()).on('data', function (obj) {
+fs.createReadStream('./drawings/popsicle.ndjson').pipe(ndjson.parse()).on('data', function (obj) {
     //obj is a javascript object
-    console.log(obj)
+    // console.log(obj)
     drawings.push(obj);
 })
 
@@ -23,3 +22,4 @@ app.get('/rainbow', (req, res) => {
 });
 
 app.use(express.static('public'))
+

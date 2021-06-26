@@ -1,8 +1,29 @@
-html, body {
-  margin: 0;
-  padding: 0;
+/* html, body {
+  margin-left: 10em;
+} */
+
+/* canvas {
+  display: block;
+} */
+
+#welcome-message {
+  text-align: center;
 }
 
-canvas {
-  display: block;
+div {
+  float: left;
+  margin-right: 10rem;
 }
+
+
+#blocker {
+  position: absolute;
+  top: 60px;
+  left: 300px;
+}
+
+.hidden {
+  display: none;
+}
+
+
