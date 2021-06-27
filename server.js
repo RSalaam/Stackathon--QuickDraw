@@ -6,15 +6,17 @@ const ndjson = require('ndjson');
 
 const drawingsArray = [];
 
-// const fileNames = ['anvil', 'apple', 'arm', 'asparagus', 'axe']
+const fileName = ['anvil']
 
-// const ndjsonFileName = () => {
-//     return fileNames[Math.floor(Math.random() * fileNames.length)]
-// }
+// let window={}
 
-fs.createReadStream("./drawings/axe.ndjson").pipe(ndjson.parse()).on('data', function (obj) {
+const ndjsonFileName = () => {
+    return fileName[0]
+}
+
+fs.createReadStream(`./drawings/${ndjsonFileName()}.ndjson`).pipe(ndjson.parse()).on('data', function (obj) {
     console.log(obj)
-    drawingsArray.push(obj);  
+    setTimeout(function() {drawingsArray.push(obj)}, 2000)
 })
 
 app.listen(port, () => {
@@ -27,6 +29,7 @@ app.get('/app', (req, res) => {
 });
 
 app.use(express.static('public'))
+
 
 
 
