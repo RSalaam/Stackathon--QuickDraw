@@ -16,7 +16,7 @@ const ndjsonFileName = () => {
 
 fs.createReadStream(`./drawings/${ndjsonFileName()}.ndjson`).pipe(ndjson.parse()).on('data', function (obj) {
     console.log(obj)
-    setTimeout(function() {drawingsArray.push(obj)}, 2000)
+    drawingsArray.push(obj)
 })
 
 app.listen(port, () => {
@@ -25,7 +25,7 @@ app.listen(port, () => {
 
 app.get('/app', (req, res) => {
     const index = Math.floor(Math.random() * drawingsArray.length);
-    res.send(drawingsArray[index]);
+    setTimeout(function() {res.send(drawingsArray[index])}, 800);
 });
 
 app.use(express.static('public'))
