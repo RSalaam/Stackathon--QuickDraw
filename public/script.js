@@ -39,7 +39,7 @@ function testSpeech() {
       guesses.style.backgroundColor = "green";
       resetBtn.style.display = "block";
     } else if (speechResult !== answer) {
-      guesses.innerHTML = "Aw, incorrect!!! If you want the <br /> answer, let the timer <b>run out</b>!";
+      guesses.innerHTML = "Aw, incorrect!!! If you want the <br /> answer, let the timer run out!";
       guesses.style.backgroundColor = "rgba(193, 119, 106, 1)";
       guesses.style.fontFamily = "Smudger";
       resetBtn.style.display = "block";
