@@ -26,4 +26,8 @@ div {
   display: none;
 }
 
+#answer {
+  color: transparent;
+}
+
 

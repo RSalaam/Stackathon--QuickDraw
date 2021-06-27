@@ -1,7 +1,7 @@
 function setup() {
   createCanvas(400, 400);
 
-  loadJSON('/rainbow', gotPopsicle);
+  loadJSON('/app', gotPopsicle);
 }
 
 function draw() {
@@ -28,5 +28,5 @@ function gotPopsicle(data) {
     }
     endShape()
   }
-  loadJSON('/rainbow', gotPopsicle)
+  loadJSON('/app', gotPopsicle)
 }
