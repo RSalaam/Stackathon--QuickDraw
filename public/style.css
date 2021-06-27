@@ -30,4 +30,8 @@ div {
   color: transparent;
 }
 
+#reset-button {
+  display: none;
+}
+
 

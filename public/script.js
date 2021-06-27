@@ -7,8 +7,11 @@ var guesses = document.getElementById("guess");
 
 // var testBtn = document.getElementById("start-button")
 
+var testBtn = document.getElementById("start-button")
+var resetBtn = document.getElementById("reset-button")
+
 function testSpeech() {
-  // testBtn.disabled = true;
+  testBtn.disabled = true;
   
   var answer = "axe"
   guesses.innerHTML = "Waiting for the correct response..."
@@ -29,7 +32,7 @@ function testSpeech() {
     var speechResult = event.results[0][0].transcript.toLocaleLowerCase();
 
     if(speechResult === answer) {
-      guesses.innerHTML = "Correct!!!"
+      guesses.innerHTML = "Correct!!! Great job!"
     } 
 
     console.log("Confidence: " + event.results[0][0].confidence)
@@ -37,8 +40,7 @@ function testSpeech() {
 
   recognition.onspeechend = function() {
     recognition.stop()
-    window.alert("Correct! Great job!")
-    window.location.reload()
+    document.getElementById("reset-button").style.display = "block";
   }
 
   recognition.onaudiostart = function(event) {
@@ -101,8 +103,10 @@ document.getElementById('start-button').onclick = function(event) {
     document.getElementById('blocker').className = "hidden";
 }
 
-document.getElementById('start-button').onclick= function(event) {
-  testSpeech()
+testBtn.addEventListener("click", testSpeech)
+
+document.getElementById("reset-button").onclick = function(event) {
+  window.location.reload()
 }
 
 
