@@ -34,4 +34,12 @@ div {
   display: none;
 }
 
+#answer {
+  display: none;
+}
+
+#reveal-answer {
+  display: none;
+}
+
 
