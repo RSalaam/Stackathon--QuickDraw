@@ -23,8 +23,8 @@ function testSpeech() {
   recognition.grammars = speechRecognitionList;
   recognition.continuous = true;
   recognition.lang = "en-US";
-  recognition.interimResults = true;
-  recognition.maxAlternatives = 100;
+  recognition.interimResults = false;
+  recognition.maxAlternatives = 1;
 
   recognition.start();
 
