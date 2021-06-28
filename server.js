@@ -8,8 +8,6 @@ const drawingsArray = [];
 
 const fileName = ['anvil']
 
-// let window={}
-
 const ndjsonFileName = () => {
     return fileName[0]
 }
@@ -25,7 +23,7 @@ app.listen(port, () => {
 
 app.get('/app', (req, res) => {
     const index = Math.floor(Math.random() * drawingsArray.length);
-    setTimeout(function() {res.send(drawingsArray[index])}, 800);
+    setTimeout(function() {res.send(drawingsArray[index])}, 900);
 });
 
 app.use(express.static('public'))

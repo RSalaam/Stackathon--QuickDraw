@@ -3,10 +3,7 @@ var SpeechGrammarList = SpeechGrammarList || webkitSpeechGrammarList;
 var SpeechRecognitionEvent =
   SpeechRecognitionEvent || webkitSpeechRecognitionEvent;
 
-var correctAnswer = document.getElementById("answer");
 var guesses = document.getElementById("guess");
-
-// var testBtn = document.getElementById("start-button")
 
 var testBtn = document.getElementById("start-button");
 var resetBtn = document.getElementById("reset-button");
@@ -36,12 +33,12 @@ function testSpeech() {
 
     if (speechResult === answer) {
       guesses.innerHTML = "Correct!!! Great job!";
-      guesses.style.backgroundColor = "green";
+      guesses.style.backgroundColor = "rgba(21, 228, 73, 0.3)";
       resetBtn.style.display = "block";
-    } else if (speechResult !== answer) {
-      guesses.innerHTML = "Aw, incorrect!!! If you want the <br /> answer, let the timer run out!";
-      guesses.style.backgroundColor = "rgba(193, 119, 106, 1)";
-      guesses.style.fontFamily = "Smudger";
+      clearInterval(downloadTimer);
+    } else {
+      guesses.innerHTML = "Aw, incorrect!!! Try again. <br /> <small>(If you're feeling lazy, let the timer run <br /> out to reveal the answer.)</small>.";
+      guesses.style.backgroundColor = "rgba(243, 8, 8, 0.4)";
       resetBtn.style.display = "block";
     }
 
@@ -91,20 +88,24 @@ function testSpeech() {
   };
 }
 
-document.getElementById("start-button").addEventListener("click", function () {
+var downloadTimer;
+
+const countdown = () => {
   var timeleft = 20;
-  var downloadTimer = setInterval(function () {
+   downloadTimer = setInterval(function () {
     if (timeleft <= -1) {
       clearInterval(downloadTimer);
       window.alert(`Time is Up! The correct answer was ${test()}!`);
       window.location.reload();
     } else {
       document.getElementById("countdown").innerHTML =
-        timeleft + " seconds left";
+        `Countdown: ${timeleft} seconds left`;
     }
     timeleft -= 1;
   }, 1000);
-});
+}
+
+document.getElementById("start-button").addEventListener("click", countdown);
 
 document.getElementById("start-button").onclick = function (event) {
   document.getElementById("blocker").className = "hidden";

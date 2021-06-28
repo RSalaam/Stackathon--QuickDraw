@@ -5,9 +5,15 @@
 /* canvas {
   display: block;
 } */
+body {
+  background: url(https://www.hdwallback.net/wp-content/uploads/2017/11/tumblr-beach-sea-images.jpg);
+}
 
 #welcome-message {
   text-align: center;
+  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 div {
@@ -19,27 +25,50 @@ div {
 #blocker {
   position: absolute;
   top: 60px;
-  left: 300px;
+  left: 600px;
+  width: 50%;
+  height: 500px;
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  opacity: 0.98;
 }
 
 .hidden {
   display: none;
 }
 
-#answer {
-  color: transparent;
+#start-button {
+  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 12rem;
+}
+   
+  #reset-button {
+  display: none;
+  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 12rem;
 }
 
-#reset-button {
-  display: none;
+#guess {
+  text-align: center;
 }
 
-#answer {
-  display: none;
+#directions {
+  text-align: center;
+  background: rgba(98, 194, 170, 0.1);
+  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
+  font-family: Garamond, serif;
+  font-size: 1.5rem;
 }
 
-#reveal-answer {
-  display: none;
+#countdown {
+  margin-left: 7rem;
 }
+
+
+
+
 
 

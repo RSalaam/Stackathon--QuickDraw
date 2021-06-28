@@ -5,11 +5,11 @@ function setup() {
 }
 
 function draw() {
-  background('rgba(255,0,255,0.1)');
+  background('rgba(20, 147, 112, 0.2)');
 }
 
 function gotPopsicle(data) {
-  background('rgba(255,0,255,0.1)');
+  background('rgba(20, 147, 112, 0.2)');
   let drawing = data.drawing;
   console.log(drawing)
   

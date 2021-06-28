@@ -9,26 +9,24 @@
     
   </head>
   <body>
-    <h1 id="welcome-message">Welcome to A Spin on the Classic Game of Pictionary!</h1>
+    <h1 id="welcome-message">Lonely, but want to play "Pictionary"? You've come to the right place!</h1>
     <!-- <script src="script.js"></script> -->
     <div class="parent"><script id="drawings" src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script><img id="blocker" src="https://i.imgur.com/rYrV1fc.png"/>
       <div>
-        <p><b>Read this first!:</b> Once you<br />
-          press start, you will have 20 seconds <br />
-          to say what you think the pictures <br />
-          represent. The picture will show <br />
-          up to the right after you press <br />
+        <p id="directions"><b>Read this first:</b><br /> Once you
+          press start, you will have 20 <br />seconds 
+          to SAY what you think the <br />drawings 
+          represent. The drawings will show <br />
+          up as a QUICK series of images to the right after <br />you press 
           start. All drawings start with any letter <br />
           between <b>"A"</b> and <b>"P"</b>. Okay, click<br /> 
-          START to make your guess! You get<br /> 
+          START to SPEAK your guess! <br /> You get
           ONE guess per round, so make it count!
         </p>
         <button type="submit" id="start-button">START!</button>
-        <h3 >Countdown: <span id="countdown"></span></h3>
+        <h3 ><span id="countdown"></span></h3>
         <h2 id="guess"></h2>
-        <span><button type="submit" id="reset-button">Reset</button></span>
-        <button type="submit" id="reveal-answer">Reveal Answer</button>
-        <h5 id="answer"></h5>
+        <button type="submit" id="reset-button"><b>RESET</b></button>
       </div>
     <script src="sketch.js"></script></div>
     <script src="script.js"></script>
