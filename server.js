@@ -6,8 +6,8 @@ const ndjson = require('ndjson');
 
 const drawingsArray = [];
 
-fs.createReadStream('./drawings/headphones.ndjson').pipe(ndjson.parse()).on('data', function (obj) {
-    console.log(obj)
+fs.createReadStream('./drawings/anvil.ndjson').pipe(ndjson.parse()).on('data', function (obj) {
+    // console.log(obj)
     drawingsArray.push(obj)
 })
 

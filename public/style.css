@@ -1,19 +1,43 @@
-/* html, body {
-  margin-left: 10em;
-} */
-
-/* canvas {
-  display: block;
-} */
 body {
-  background: url(https://www.hdwallback.net/wp-content/uploads/2017/11/tumblr-beach-sea-images.jpg);
+  background-color: #87ac9c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: #857b7f;
+  padding: 1.5%;
+  background: linear-gradient(-45deg, #F9E7E7, #c2688b, #688d9b, #458677);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+#wrapping-image {
+  background-image: url(https://i.pinimg.com/736x/f0/18/8a/f0188a4680b2ef1ef813b9602b990798.jpg);
 }
 
 #welcome-message {
   text-align: center;
-  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  background: -webkit-linear-gradient(rgb(75, 100, 94), rgb(7, 46, 56));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  border-style: solid;
+  border-color: #857b7f;
+  padding: 0.5rem;
+  border-radius: 40%;
+  font-family:Georgia, 'Times New Roman', Times, serif;
 }
 
 div {
@@ -22,14 +46,20 @@ div {
 }
 
 
-#blocker {
+img {
+  width: 150%;
+  height: 475px;
+  align-self: center;
   position: absolute;
-  top: 60px;
-  left: 600px;
-  width: 50%;
-  height: 500px;
-  box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
-  opacity: 0.98;
+  float: right;
+  margin-top: 3rem;
+  color: aliceblue;
+}
+
+#drawings {
+  align-self: center;
+  /* position: absolute; */
+  float: left;
 }
 
 .hidden {
@@ -37,18 +67,32 @@ div {
 }
 
 #start-button {
-  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  background: -webkit-linear-gradient(rgb(86, 119, 111), rgb(7, 46, 56));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 12rem;
+  align-self: center;
+  font-weight: bolder;
+  font-size: 150%;
 }
    
-  #reset-button {
+  #retry-button {
   display: none;
-  background: -webkit-linear-gradient(rgb(98, 138, 128), rgb(7, 46, 56));
+  background: -webkit-linear-gradient(rgb(86, 119, 111), rgb(7, 46, 56));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-left: 12rem;
+  align-self: center;
+  font-weight: bolder;
+  font-size: 110%;
+}
+
+#new-game-button {
+  display: none;
+  background: -webkit-linear-gradient(rgb(86, 119, 111), rgb(7, 46, 56));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  align-self: center;
+  font-weight: bolder;
+  font-size: 110%;
 }
 
 #guess {
@@ -61,10 +105,21 @@ div {
   box-shadow: 12px 12px 2px 1px rgba(0, 0, 255, .2);
   font-family: Garamond, serif;
   font-size: 1.5rem;
+  align-self: center;
 }
 
 #countdown {
-  margin-left: 7rem;
+  align-self: center;
+}
+
+#game-description {
+  font-size: 1rem;
+  align-self: center;
+  position: relative;
+}
+
+#overlay {
+  position: relative;
 }
 
 
